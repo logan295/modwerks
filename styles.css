@@ -64,6 +64,7 @@ button{font:inherit}
 .section-heading{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:36px}
 .section-heading h2,.split-copy h2,.contact-strip h2,.details-panel h2{font-family:'Barlow Condensed',Arial,sans-serif;font-weight:700;text-transform:uppercase;line-height:.98;letter-spacing:.003em;margin:0}
 .section-heading h2{font-size:clamp(46px,5.2vw,72px);max-width:680px}
+@media(max-width:520px){#services-title{font-size:clamp(31px,10vw,40px)}}
 .section-heading p{color:var(--muted);max-width:360px;margin:0 0 4px}
 .red-rule{width:92px;height:3px;background:var(--red);margin:22px 0 26px}
 .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
