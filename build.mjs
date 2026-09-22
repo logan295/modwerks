@@ -1,4 +1,7 @@
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+
+const styleVersion = createHash('sha256').update(readFileSync('styles.css')).digest('hex').slice(0, 8);
 
 const address = '221 Foothills Rd, Lake Oswego, OR 97034';
 const instagram = 'https://www.instagram.com/modwerks_llc/';
@@ -58,7 +61,7 @@ function footer(root) {
 
 function page({ title, description, root = '', active, body }) {
   return `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080808"><meta name="description" content="${description}"><title>${title} | Modwerks</title><link rel="icon" href="${root}assets/modwerks-logo.png" type="image/png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>${active === 'shop' ? `<link rel="stylesheet" href="${root}assets/vendor/leaflet.css">` : ''}<link rel="stylesheet" href="${root}styles.css"><script src="${root}script.js" defer></script>${active === 'shop' ? `<script src="${root}assets/vendor/leaflet.js" defer></script><script src="${root}map.js?v=zoom15" defer></script>` : ''}${active === 'service-request' || active === 'storage-request' ? `<script src="${root}intake.js" defer></script>` : ''}</head><body>${header(root, active)}<main id="main"${active === 'shop' ? ' class="shop-main"' : ''}>${body}</main>${footer(root)}</body></html>`;
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080808"><meta name="description" content="${description}"><title>${title} | Modwerks</title><link rel="icon" href="${root}assets/modwerks-logo.png" type="image/png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>${active === 'shop' ? `<link rel="stylesheet" href="${root}assets/vendor/leaflet.css">` : ''}<link rel="stylesheet" href="${root}styles.css?v=${styleVersion}"><script src="${root}script.js" defer></script>${active === 'shop' ? `<script src="${root}assets/vendor/leaflet.js" defer></script><script src="${root}map.js?v=zoom15" defer></script>` : ''}${active === 'service-request' || active === 'storage-request' ? `<script src="${root}intake.js" defer></script>` : ''}</head><body>${header(root, active)}<main id="main"${active === 'shop' ? ' class="shop-main"' : ''}>${body}</main>${footer(root)}</body></html>`;
 }
 
 const home = page({
