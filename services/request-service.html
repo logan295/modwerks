@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080808"><meta name="description" content="Prepare a vehicle service request for Modwerks in Lake Oswego."><title>Request Service | Modwerks</title><link rel="icon" href="../assets/modwerks-logo.png" type="image/png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="../styles.css"><script src="../script.js" defer></script><script src="../intake.js" defer></script></head><body><a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Modwerks home"><img src="../assets/modwerks-logo.png" alt="Modwerks" width="1536" height="1024"></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a class="nav-link " href="../index.html" >Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-trigger active" type="button" aria-expanded="false" aria-controls="services-menu">Services <span class="nav-caret" aria-hidden="true"></span></button>
+          <div class="dropdown-panel" id="services-menu">
+            <a href="../services/vehicle-service.html" >Vehicle Service</a>
+            <a href="../services/vehicle-storage.html" >Vehicle Storage</a>
+          </div>
+        </div>
+        <a class="nav-link " href="../our-shop.html" >Our Shop</a>
+      </nav>
+      <div class="header-actions"><a class="header-instagram" href="https://www.instagram.com/modwerks_llc/" target="_blank" rel="noopener noreferrer" aria-label="Modwerks on Instagram"><img src="../assets/instagram-icon.svg" alt="" width="24" height="24"></a><a class="header-request" href="../services/request-service.html#intake">Request Service</a><a class="header-call" href="tel:+15032016650">Call (503) 201-6650</a></div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav"><span class="menu-lines" aria-hidden="true"><span></span><span></span><span></span></span>Menu</button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="../index.html" >Home</a>
+      <span class="mobile-heading">Services</span>
+      <a class="mobile-sub" href="../services/vehicle-service.html" >Vehicle Service</a>
+      <a class="mobile-sub" href="../services/vehicle-storage.html" >Vehicle Storage</a>
+      <a class="mobile-sub" href="../services/request-service.html#intake" aria-current="page">Request Service</a>
+      <a class="mobile-sub" href="../services/request-storage.html#intake" >Ask About Storage</a>
+      <a href="../our-shop.html" >Our Shop</a>
+      <a href="tel:+15032016650">Call (503) 201-6650</a>
+      <a class="mobile-instagram" href="https://www.instagram.com/modwerks_llc/" target="_blank" rel="noopener noreferrer"><img src="../assets/instagram-icon.svg" alt="" width="22" height="22">Instagram</a>
+    </nav>
+  </header><main id="main"><section class="intake-hero service"><div class="container"><p>Modwerks · Lake Oswego</p><h1>Request Service</h1><div class="red-rule" aria-hidden="true"></div></div></section>
+  <section class="intake-page" id="intake"><div class="container intake-layout"><aside class="intake-intro"><h2>Start with your vehicle.</h2><p>Tell us what you drive and what needs attention. We’ll have the details ready for a conversation about the work.</p><ol class="intake-progress" aria-label="Request progress"><li data-progress="vehicle" class="is-active" aria-current="step"><span>01</span> Vehicle</li><li data-progress="contact"><span>02</span> Contact</li><li data-progress="review"><span>03</span> Review</li></ol><div class="intake-direct"><strong>Prefer to talk?</strong><a href="tel:+15032016650">Call (503) 201-6650</a><span>Monday – Friday · 8 am – 5 pm</span></div></aside>
+    <div class="intake-card"><form class="intake-form" data-intake="service" novalidate>
+      <fieldset class="intake-step" data-step="vehicle"><legend class="sr-only">Vehicle details</legend><p class="intake-step-count">Step 1 of 2</p><h2 tabindex="-1">Tell us about your vehicle.</h2><p class="intake-step-copy">A few basics help us understand the work before we talk.</p>
+        <div class="intake-fields"><div class="intake-field"><label for="vehicle-year">Year <span aria-hidden="true">*</span></label><input id="vehicle-year" name="year" type="text" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" placeholder="e.g. 2018" autocomplete="off" required><small>Four-digit model year</small></div><div class="intake-field"><label for="vehicle-make">Make <span aria-hidden="true">*</span></label><input id="vehicle-make" name="make" type="text" placeholder="e.g. Porsche" autocomplete="off" required></div><div class="intake-field"><label for="vehicle-model">Model <span aria-hidden="true">*</span></label><input id="vehicle-model" name="model" type="text" placeholder="e.g. 911 Carrera" autocomplete="off" required></div>
+        <div class="intake-field"><label for="service-type">Type of work <span aria-hidden="true">*</span></label><select id="service-type" name="requestType" required><option value="">Choose the closest fit</option><option>Maintenance</option><option>Diagnostics or repair</option><option>Performance or upgrade</option><option>Pre-purchase inspection</option><option>Something else</option></select></div><div class="intake-field"><label for="vehicle-notes">What is happening? <span class="optional">Optional</span></label><textarea id="vehicle-notes" name="notes" rows="4" placeholder="Symptoms, timing, or the work you have in mind"></textarea></div></div>
+        <div class="intake-controls"><button class="button" type="button" data-next>Continue to contact <span aria-hidden="true">→</span></button></div>
+      </fieldset>
+      <fieldset class="intake-step" data-step="contact" hidden><legend class="sr-only">Contact details</legend><p class="intake-step-count">Step 2 of 2</p><h2 tabindex="-1">How can we reach you?</h2><p class="intake-step-copy">We only need the basics to follow up about your vehicle.</p><div class="intake-fields"><div class="intake-field"><label for="contact-name">Your name <span aria-hidden="true">*</span></label><input id="contact-name" name="name" type="text" autocomplete="name" required></div><div class="intake-field"><label for="contact-email">Email <span aria-hidden="true">*</span></label><input id="contact-email" name="email" type="email" autocomplete="email" required></div><div class="intake-field"><label for="contact-phone">Phone <span class="optional">Optional</span></label><input id="contact-phone" name="phone" type="tel" autocomplete="tel"></div></div><p class="intake-preview-note">Preview only: this form is not connected, and your information will not be sent.</p><div class="intake-controls"><button class="intake-back" type="button" data-back="vehicle">← Back</button><button class="button" type="button" data-review>Review request <span aria-hidden="true">→</span></button></div></fieldset>
+      <section class="intake-review" data-step="review" hidden aria-live="polite"><p class="intake-step-count">Review</p><h2 tabindex="-1">Check the details.</h2><p class="intake-step-copy">Your request is prepared for review. Submission is not active yet, so nothing has been sent to Modwerks.</p><dl class="intake-summary" data-summary></dl><div class="intake-controls"><button class="intake-back" type="button" data-back="contact">← Edit details</button><a class="button" href="tel:+15032016650">Call the shop</a></div></section>
+    </form></div></div></section></main><footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand"><a class="brand" href="../index.html" aria-label="Modwerks home"><img src="../assets/modwerks-logo.png" alt="Modwerks" width="1536" height="1024" loading="lazy"></a><p>Precision tuned. Passion driven. European vehicle service in Lake Oswego, Oregon.</p></div>
+      <div><h2 class="footer-title">Visit the shop</h2><address class="footer-address"><p>221 Foothills Rd, Lake Oswego, OR 97034<br>Right next to Foothills Park off State Street</p><p>Monday – Friday · 8:00 AM – 5:00 PM<br>Saturday · 10:00 AM – 3:00 PM<br>Sunday · By appointment only</p><a href="https://www.google.com/maps/place/ModWerks/@45.4202423,-122.6583772,17z/data=!3m1!4b1!4m6!3m5!1s0x5495752699d6a419:0xa7a62b8e5ea9791f!8m2!3d45.4202423!4d-122.6583772!16s%2Fg%2F11z83wj5z9" target="_blank" rel="noopener noreferrer">View on Google Maps ↗</a></address></div>
+      <div><h2 class="footer-title">Get in touch</h2><div class="footer-links"><a href="tel:+15032016650">(503) 201-6650</a><a class="footer-instagram" href="https://www.instagram.com/modwerks_llc/" target="_blank" rel="noopener noreferrer"><img src="../assets/instagram-icon.svg" alt="" width="22" height="22">Instagram</a><a href="https://www.modautowerks.com/contact" target="_blank" rel="noopener noreferrer">Contact Modwerks</a><a href="../services/vehicle-service.html">Vehicle Service</a><a href="../services/vehicle-storage.html">Vehicle Storage</a></div></div>
+    </div>
+    <nav class="container footer-sitemap" aria-label="Sitemap"><h2>Sitemap</h2><div><a href="../index.html">Home</a><a href="../services/vehicle-service.html">Vehicle Service</a><a href="../services/vehicle-storage.html">Vehicle Storage</a><a href="../our-shop.html">Our Shop</a><a href="../services/request-service.html#intake">Request Service</a><a href="../services/request-storage.html#intake">Ask About Storage</a></div></nav>
+    <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© 2026 Modwerks. Lake Oswego, Oregon.</span><span>European · Luxury · Diesel · Performance</span></div></div>
+  </footer></body></html>
